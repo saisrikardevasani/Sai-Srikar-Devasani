@@ -670,7 +670,8 @@ footer p { font-size:.76rem; color:var(--text3); letter-spacing:.03em; }
         <div class="project-name">Facial Expression-Driven Music Recommendation</div>
         <div class="project-pub">📄 Published · IEEE</div>
         <div class="project-desc">
-          Real-time music recommendation system that analyses a user's facial expression via CNN to infer their emotional state (Happy, Sad, Angry, etc.) and dynamically maps it to personalised Spotify playlists. Achieved <strong style="color:var(--accent)">71.13% accuracy</strong> on the FER-2013 dataset. Deployed on Hugging Face with a Gradio UI.
+          
+Custom 4-block CNN trained on 35,887 FER-2013 grayscale images to classify facial expressions into 7 emotions. Achieved 71.1% training accuracy. Deployed on Hugging Face Spaces with a Gradio interface — users upload a face image, the model detects the dominant emotion, and maps it to a curated Spotify playlist. Also includes a local real-time webcam detection script using OpenCV's Haar Cascade classifier.Achieved <strong style="color:var(--accent)">71.13% accuracy</strong> on the FER-2013 dataset. Deployed on Hugging Face with a Gradio UI.
         </div>
         <div class="project-tags">
           <span class="ptag">CNN</span><span class="ptag">OpenCV</span>
@@ -687,8 +688,7 @@ footer p { font-size:.76rem; color:var(--text3); letter-spacing:.03em; }
         </div>
         <div class="project-name">Spam Message Detection System</div>
         <div class="project-desc">
-          Spam detection pipeline using supervised ML algorithms, POS tagging for feature extraction, and Bayesian classifiers. Applied data cleaning and normalisation techniques, and built a word cloud to visually surface high-frequency spam indicators. Tuned models for optimal classification performance.
-        </div>
+          Message spam classifier built on the Enron corpus (5,171 emails). Benchmarked six ML algorithms — SVM, KNN, Naive Bayes, Decision Tree, Logistic Regression, and Random Forest — after TF-IDF vectorisation across a 50,342-dimensional feature space. Multinomial Naive Bayes achieved the best result at 98.58% accuracy with 0.97 F1-score on spam detection.
         <div class="project-tags">
           <span class="ptag">Python</span><span class="ptag">POS Tagging</span>
           <span class="ptag">Bayesian Classifiers</span>
@@ -704,7 +704,7 @@ footer p { font-size:.76rem; color:var(--text3); letter-spacing:.03em; }
         </div>
         <div class="project-name">VectorSight</div>
         <div class="project-desc">
-          AI-powered project built during the Nomad AI Hackathon. Leverages vector search and retrieval-augmented generation (RAG) to provide intelligent, context-aware insights from unstructured data sources.
+          Built for The Strange Data Project hackathon ($5,000 prize pool). Solves a core LLM limitation — models misread SVG code as numbers rather than geometry. VectorSight converts raw SVG into structured spatial JSON through a 61-transform pipeline (parsing, shape analysis, relationships, validation), giving any LLM accurate spatial context without fine-tuning. Stack: FastAPI backend, Next.js + Hono frontend, LangChain + Claude integration, deployed on Vercel.
         </div>
         <div class="project-tags">
           <span class="ptag">Python</span><span class="ptag">RAG</span>
@@ -720,8 +720,7 @@ footer p { font-size:.76rem; color:var(--text3); letter-spacing:.03em; }
         </div>
         <div class="project-name">Automatic Scientific Article Summarization</div>
         <div class="project-desc">
-          Automated summarization pipeline for scientific articles using transformer-based NLP models. Extracts key findings from research papers to generate concise, accurate summaries for faster literature review.
-        </div>
+          Abstractive text summarisation system using a Seq2Seq LSTM model with Attention, trained on 10,000 Amazon Fine Food Reviews. Encoder uses 3 stacked LSTMs (latent dim 500), decoder attends over encoder outputs and generates summaries via greedy decoding. Full preprocessing pipeline includes HTML cleaning, contraction expansion, Lancaster stemming, and stopword removal.
         <div class="project-tags">
           <span class="ptag">Python</span><span class="ptag">NLP</span>
           <span class="ptag">Transformers</span><span class="ptag">Hugging Face</span>
@@ -737,8 +736,7 @@ footer p { font-size:.76rem; color:var(--text3); letter-spacing:.03em; }
         <div class="project-name">ASR / LSR with Wav2Vec 2.0</div>
         <div class="project-wip">🔧 In Progress · Working</div>
         <div class="project-desc">
-          Automatic Speech Recognition (ASR) and Language-Speech Recognition (LSR) system built on Facebook's Wav2Vec 2.0 architecture. Focused on fine-tuning and optimising transformer-based models for robust, low-latency speech-to-text transcription.
-        </div>
+          Fine-tuning Wav2Vec 2.0 and WavLM for low-resource Automatic Speech Recognition on Indian languages, specifically Telugu, using Microsoft's Indian Language Speech Corpus. Uses CTC loss, gradient accumulation, and mixed precision training. Currently analysing training instability observed between steps 2000–2400 and conducting dataset scaling experiments to minimise Word Error Rate (WER).
         <div class="project-tags">
           <span class="ptag">Python</span><span class="ptag">Wav2Vec 2.0</span>
           <span class="ptag">PyTorch</span><span class="ptag">Hugging Face</span>
