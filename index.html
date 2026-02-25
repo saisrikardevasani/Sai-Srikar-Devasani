@@ -291,6 +291,7 @@ section { padding:80px 0; }
 
 /* ─── PROJECTS ─── */
 .projects-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; }
+.projects-grid .project-card:last-child:nth-child(odd) { grid-column:1 / -1; max-width:calc(50% - .5rem); }
 .project-card {
   background:var(--surface); border:1px solid var(--border);
   border-radius:14px; padding:1.6rem;
@@ -319,6 +320,12 @@ section { padding:80px 0; }
   font-size:.75rem; font-weight:600;
   color:var(--accent); background:var(--accent-l);
   border:1px solid var(--accent-b); border-radius:7px;
+  padding:.35rem .75rem; display:inline-flex; align-items:center; gap:.4rem;
+}
+.project-wip {
+  font-size:.75rem; font-weight:600;
+  color:#D97706; background:rgba(251,191,36,0.12);
+  border:1px solid rgba(217,119,6,0.3); border-radius:7px;
   padding:.35rem .75rem; display:inline-flex; align-items:center; gap:.4rem;
 }
 .project-tags { display:flex; flex-wrap:wrap; gap:.35rem; margin-top:auto; }
@@ -396,6 +403,7 @@ footer p { font-size:.76rem; color:var(--text3); letter-spacing:.03em; }
 @media(max-width:720px){
   .about-grid,.contact-grid { grid-template-columns:1fr; }
   .skills-grid,.edu-grid,.projects-grid { grid-template-columns:1fr; }
+  .projects-grid .project-card:last-child:nth-child(odd) { grid-column:auto; max-width:none; }
   .exp-item { grid-template-columns:1fr; gap:.3rem; }
   .nav-center { display:none; }
   .stat-strip { gap:1.5rem; }
@@ -454,7 +462,7 @@ footer p { font-size:.76rem; color:var(--text3); letter-spacing:.03em; }
         <div class="stat-l">IEEE Published</div>
       </div>
       <div class="stat-item">
-        <div class="stat-n">2<span>+</span></div>
+        <div class="stat-n">5<span>+</span></div>
         <div class="stat-l">AI Projects</div>
       </div>
     </div>
@@ -493,6 +501,7 @@ footer p { font-size:.76rem; color:var(--text3); letter-spacing:.03em; }
       <h2 class="section-title">Technical Skills</h2>
     </div>
     <div class="skills-grid reveal">
+
       <div class="skill-card">
         <div class="skill-card-head">
           <div class="skill-icon">🤖</div>
@@ -503,20 +512,37 @@ footer p { font-size:.76rem; color:var(--text3); letter-spacing:.03em; }
           <span class="tag">Computer Vision</span><span class="tag">NLP</span>
           <span class="tag">Emotion Recognition</span><span class="tag">Sentiment Analysis</span>
           <span class="tag">ASR</span><span class="tag">Model Tuning</span><span class="tag">EDA</span>
+          <span class="tag">RAG</span><span class="tag">Transformers</span><span class="tag">Fine-tuning</span>
         </div>
       </div>
+
       <div class="skill-card">
         <div class="skill-card-head">
           <div class="skill-icon">💻</div>
-          <div class="skill-card-title">Languages & Libraries</div>
+          <div class="skill-card-title">Languages & Frameworks</div>
         </div>
         <div class="tags">
-          <span class="tag">Python</span><span class="tag">C/C++</span>
-          <span class="tag">HTML + CSS</span><span class="tag">JavaScript</span>
-          <span class="tag">Arduino</span><span class="tag">OpenCV</span>
-          <span class="tag">Gradio</span><span class="tag">Hugging Face</span>
+          <span class="tag">Python</span><span class="tag">C</span><span class="tag">C++</span>
+          <span class="tag">C#</span><span class="tag">Java</span><span class="tag">JavaScript</span>
+          <span class="tag">R</span><span class="tag">HTML5</span><span class="tag">CSS3</span>
+          <span class="tag">Django</span><span class="tag">Node.js</span><span class="tag">Angular</span>
         </div>
       </div>
+
+      <div class="skill-card">
+        <div class="skill-card-head">
+          <div class="skill-icon">📦</div>
+          <div class="skill-card-title">ML Libraries & Tools</div>
+        </div>
+        <div class="tags">
+          <span class="tag">TensorFlow</span><span class="tag">PyTorch</span>
+          <span class="tag">Keras</span><span class="tag">scikit-learn</span>
+          <span class="tag">OpenCV</span><span class="tag">NumPy</span><span class="tag">Pandas</span>
+          <span class="tag">Matplotlib</span><span class="tag">Plotly</span><span class="tag">SciPy</span>
+          <span class="tag">MLflow</span><span class="tag">Gradio</span><span class="tag">Hugging Face</span>
+        </div>
+      </div>
+
       <div class="skill-card">
         <div class="skill-card-head">
           <div class="skill-icon">🛡️</div>
@@ -529,18 +555,35 @@ footer p { font-size:.76rem; color:var(--text3); letter-spacing:.03em; }
           <span class="tag">XSS</span><span class="tag">CSRF</span>
         </div>
       </div>
+
       <div class="skill-card">
         <div class="skill-card-head">
           <div class="skill-icon">☁️</div>
-          <div class="skill-card-title">Cloud & Tools</div>
+          <div class="skill-card-title">Cloud & Infrastructure</div>
         </div>
         <div class="tags">
           <span class="tag">AWS</span><span class="tag">Azure</span>
-          <span class="tag">MySQL</span><span class="tag">Git</span>
-          <span class="tag">GitHub</span><span class="tag">VS Code</span>
-          <span class="tag">Spotify API</span>
+          <span class="tag">Google Cloud</span><span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span><span class="tag">GitHub Actions</span>
+          <span class="tag">GitLab CI</span><span class="tag">Vercel</span>
+          <span class="tag">Datadog</span><span class="tag">Sentry</span>
         </div>
       </div>
+
+      <div class="skill-card">
+        <div class="skill-card-head">
+          <div class="skill-icon">🗄️</div>
+          <div class="skill-card-title">Databases & DevTools</div>
+        </div>
+        <div class="tags">
+          <span class="tag">MySQL</span><span class="tag">MongoDB</span>
+          <span class="tag">Apache Cassandra</span><span class="tag">MS SQL Server</span>
+          <span class="tag">Git</span><span class="tag">Postman</span>
+          <span class="tag">Power BI</span><span class="tag">Notion</span>
+          <span class="tag">Arduino</span><span class="tag">Raspberry Pi</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -622,32 +665,87 @@ footer p { font-size:.76rem; color:var(--text3); letter-spacing:.03em; }
       <div class="project-card">
         <div class="project-top">
           <span class="project-badge">Research · 2024</span>
-          <a href="https://github.com/saisrikardevasani" target="_blank" class="project-link-btn">GitHub ↗️</a>
+          <a href="https://github.com/saisrikardevasani/Facial-Expression-Driven-Music-Recommendation-System" target="_blank" class="project-link-btn">GitHub ↗</a>
         </div>
         <div class="project-name">Facial Expression-Driven Music Recommendation</div>
         <div class="project-pub">📄 Published · IEEE</div>
         <div class="project-desc">
-          Real-time music recommendation system that analyses a user's facial expression via CNN to infer their emotional state (Happy, Sad, Angry, etc.) and dynamically maps it to personalised Spotify playlists. Achieved <strong style="color:var(--accent)">71.13% accuracy</strong> on the FER-2013 dataset. Deployed on Hugging Face with a Gradio UI.
+          Custom 4-block CNN trained on 35,887 FER-2013 grayscale images to classify facial expressions into 7 emotions. Achieved <strong style="color:var(--accent)">71.1% training accuracy</strong>. Deployed on Hugging Face Spaces with a Gradio interface — users upload a face image, the model detects the dominant emotion, and maps it to a curated Spotify playlist. Includes a local real-time webcam detection script using OpenCV's Haar Cascade classifier.
         </div>
         <div class="project-tags">
           <span class="ptag">CNN</span><span class="ptag">OpenCV</span>
           <span class="ptag">Gradio</span><span class="ptag">Spotify API</span>
           <span class="ptag">Hugging Face</span><span class="ptag">FER-2013</span>
+          <span class="ptag">TensorFlow</span><span class="ptag">Keras</span>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-top">
           <span class="project-badge">ML Project · 2024</span>
+          <a href="https://github.com/saisrikardevasani/Spam-Detection" target="_blank" class="project-link-btn">GitHub ↗</a>
         </div>
         <div class="project-name">Spam Message Detection System</div>
         <div class="project-desc">
-          Spam detection pipeline using supervised ML algorithms, POS tagging for feature extraction, and Bayesian classifiers. Applied data cleaning and normalisation techniques, and built a word cloud to visually surface high-frequency spam indicators. Tuned models for optimal classification performance.
+          Email spam classifier built on the Enron corpus (5,171 emails). Benchmarked six ML algorithms — SVM, KNN, Naive Bayes, Decision Tree, Logistic Regression, and Random Forest — after TF-IDF vectorisation across a 50,342-dimensional feature space. Multinomial Naive Bayes achieved the best result at <strong style="color:var(--accent)">98.58% accuracy</strong> with 0.97 F1-score on spam detection.
         </div>
         <div class="project-tags">
-          <span class="ptag">Python</span><span class="ptag">POS Tagging</span>
-          <span class="ptag">Bayesian Classifiers</span>
-          <span class="ptag">Word Cloud</span><span class="ptag">scikit-learn</span>
+          <span class="ptag">Python</span><span class="ptag">TF-IDF</span>
+          <span class="ptag">Naive Bayes</span><span class="ptag">SVM</span>
+          <span class="ptag">scikit-learn</span><span class="ptag">NLTK</span>
+          <span class="ptag">Word Cloud</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <span class="project-badge">Hackathon · 2025</span>
+          <a href="https://github.com/saisrikardevasani/VectorSight" target="_blank" class="project-link-btn">GitHub ↗</a>
+        </div>
+        <div class="project-name">VectorSight</div>
+        <div class="project-desc">
+          Built for The Strange Data Project hackathon ($5,000 prize pool). Solves a core LLM limitation — models misread SVG code as numbers rather than geometry. VectorSight converts raw SVG into structured spatial JSON through a 61-transform pipeline (parsing, shape analysis, relationships, validation), giving any LLM accurate spatial context without fine-tuning or modifying the model.
+        </div>
+        <div class="project-tags">
+          <span class="ptag">Python</span><span class="ptag">FastAPI</span>
+          <span class="ptag">Next.js</span><span class="ptag">LangChain</span>
+          <span class="ptag">Claude API</span><span class="ptag">SVG</span>
+          <span class="ptag">Vercel</span><span class="ptag">GitHub Actions</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <span class="project-badge">NLP · 2024</span>
+          <a href="https://github.com/saisrikardevasani/Automatic-Scientific-Article-Summarization-" target="_blank" class="project-link-btn">GitHub ↗</a>
+        </div>
+        <div class="project-name">Automatic Scientific Article Summarization</div>
+        <div class="project-desc">
+          Abstractive text summarisation system using a Seq2Seq LSTM model with Attention, trained on 10,000 Amazon Fine Food Reviews. Encoder uses 3 stacked LSTMs (latent dim 500), decoder attends over encoder outputs and generates summaries via greedy decoding. Full preprocessing pipeline includes HTML cleaning, contraction expansion, Lancaster stemming, and stopword removal.
+        </div>
+        <div class="project-tags">
+          <span class="ptag">Python</span><span class="ptag">TensorFlow</span>
+          <span class="ptag">Seq2Seq LSTM</span><span class="ptag">Attention</span>
+          <span class="ptag">NLTK</span><span class="ptag">BeautifulSoup</span>
+          <span class="ptag">Jupyter</span>
+        </div>
+      </div>
+
+      <div class="project-card" style="border-color:rgba(217,119,6,0.3)">
+        <div class="project-top">
+          <span class="project-badge">Speech AI · Ongoing</span>
+          <a href="https://github.com/saisrikardevasani/ASR-LSR-Wave2Vec" target="_blank" class="project-link-btn">GitHub ↗</a>
+        </div>
+        <div class="project-name">Low-Resource ASR with Wav2Vec 2.0</div>
+        <div class="project-wip">🔧 In Progress · Working</div>
+        <div class="project-desc">
+          Fine-tuning Wav2Vec 2.0 and WavLM for low-resource Automatic Speech Recognition on Indian languages, specifically Telugu, using Microsoft's Indian Language Speech Corpus. Uses CTC loss, gradient accumulation, and mixed precision training. Currently analysing training instability observed between steps 2000–2400 and conducting dataset scaling experiments to minimise Word Error Rate (WER).
+        </div>
+        <div class="project-tags">
+          <span class="ptag">Python</span><span class="ptag">Wav2Vec 2.0</span>
+          <span class="ptag">WavLM</span><span class="ptag">PyTorch</span>
+          <span class="ptag">Hugging Face</span><span class="ptag">CTC Loss</span>
+          <span class="ptag">ASR</span><span class="ptag">Telugu</span>
         </div>
       </div>
 
@@ -690,6 +788,7 @@ footer p { font-size:.76rem; color:var(--text3); letter-spacing:.03em; }
       <div class="project-card" style="max-width:600px">
         <div class="project-top">
           <span class="project-badge">IEEE · 2024</span>
+          <a href="https://ieeexplore.ieee.org/document/11371105" target="_blank" class="project-link-btn">IEEE Xplore ↗</a>
         </div>
         <div class="project-name" style="font-size:.95rem">Facial Expression-Driven Music Recommendation Using Convolutional Neural Networks and Gradio Interface Integration</div>
         <div class="project-desc">
