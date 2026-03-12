@@ -1118,7 +1118,7 @@
           <div class="stat-l">IEEE Published</div>
         </div>
         <div class="stat-item">
-          <div class="stat-n">5<span>+</span></div>
+          <div class="stat-n">7<span>+</span></div>
           <div class="stat-l">AI Projects</div>
         </div>
       </div>
@@ -1190,7 +1190,8 @@
             <span class="tag">Python</span><span class="tag">C</span><span class="tag">C++</span>
             <span class="tag">C#</span><span class="tag">Java</span><span class="tag">JavaScript</span>
             <span class="tag">R</span><span class="tag">HTML5</span><span class="tag">CSS3</span>
-            <span class="tag">Django</span><span class="tag">Node.js</span><span class="tag">Angular</span>
+            <span class="tag">Django</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span>
+            <span class="tag">Node.js</span><span class="tag">Angular</span>
           </div>
         </div>
 
@@ -1205,6 +1206,7 @@
             <span class="tag">OpenCV</span><span class="tag">NumPy</span><span class="tag">Pandas</span>
             <span class="tag">Matplotlib</span><span class="tag">Plotly</span><span class="tag">SciPy</span>
             <span class="tag">MLflow</span><span class="tag">Gradio</span><span class="tag">Hugging Face</span>
+            <span class="tag">FAISS</span><span class="tag">Sentence Transformers</span><span class="tag">UMAP</span>
           </div>
         </div>
 
@@ -1231,7 +1233,7 @@
             <span class="tag">Google Cloud</span><span class="tag">Docker</span>
             <span class="tag">Kubernetes</span><span class="tag">GitHub Actions</span>
             <span class="tag">GitLab CI</span><span class="tag">Vercel</span>
-            <span class="tag">Datadog</span><span class="tag">Sentry</span>
+            <span class="tag">Prometheus</span><span class="tag">Datadog</span><span class="tag">Sentry</span>
           </div>
         </div>
 
@@ -1241,7 +1243,7 @@
             <div class="skill-card-title">Databases & DevTools</div>
           </div>
           <div class="tags">
-            <span class="tag">MySQL</span><span class="tag">MongoDB</span>
+            <span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Redis</span>
             <span class="tag">Apache Cassandra</span><span class="tag">MS SQL Server</span>
             <span class="tag">Git</span><span class="tag">Postman</span>
             <span class="tag">Power BI</span><span class="tag">Notion</span>
@@ -1344,6 +1346,50 @@
         <h2 class="section-title">Projects & Research</h2>
       </div>
       <div class="projects-grid reveal">
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-badge">NLP · 2025</span>
+            <a href="https://github.com/saisrikardevasani/Semantic-Movie-Search-Recommendation-Engine"
+              target="_blank" class="project-link-btn">GitHub ↗</a>
+          </div>
+          <div class="project-name">Semantic Movie Search & Recommendation Engine</div>
+          <div class="project-desc">
+            A web application that lets you describe a movie in natural language and finds the most semantically similar
+            movies using AI-powered embeddings — not keyword matches, but <strong style="color:var(--accent)">meaning-based
+            matches</strong>. Uses Sentence Transformers (all-MiniLM-L6-v2) to generate 384-dimensional embeddings and
+            FAISS for millisecond-level cosine similarity search. Features a FastAPI backend with REST endpoints and an
+            interactive Streamlit frontend with UMAP embedding visualisation.
+          </div>
+          <div class="project-tags">
+            <span class="ptag">Python</span><span class="ptag">FAISS</span>
+            <span class="ptag">Sentence Transformers</span><span class="ptag">FastAPI</span>
+            <span class="ptag">Streamlit</span><span class="ptag">UMAP</span>
+            <span class="ptag">Plotly</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-badge">MLOps · 2025</span>
+            <a href="https://github.com/saisrikardevasani/Production-Grade-Multi-Feature-NLP-REST-API"
+              target="_blank" class="project-link-btn">GitHub ↗</a>
+          </div>
+          <div class="project-name">Production-Grade NLP REST API</div>
+          <div class="project-desc">
+            A production-ready REST API wrapping multiple ML models to provide <strong style="color:var(--accent)">4 NLP
+            services</strong> — Spam Detection, Sentiment Analysis, Text Summarization, and Language Detection. Includes
+            JWT authentication, tier-based rate limiting via Redis, Prometheus metrics, Dockerized deployment, and a
+            CI/CD pipeline with GitHub Actions. Comprehensive test suite with <strong style="color:var(--accent)">36/36
+            tests passing</strong>.
+          </div>
+          <div class="project-tags">
+            <span class="ptag">Python</span><span class="ptag">FastAPI</span>
+            <span class="ptag">Docker</span><span class="ptag">JWT</span>
+            <span class="ptag">Prometheus</span><span class="ptag">DistilBERT</span>
+            <span class="ptag">CI/CD</span><span class="ptag">Redis</span>
+          </div>
+        </div>
 
         <div class="project-card">
           <div class="project-top">
