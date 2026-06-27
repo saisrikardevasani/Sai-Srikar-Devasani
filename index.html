@@ -448,6 +448,36 @@
         <div class="project-tags"><span class="ptag">TensorFlow</span><span class="ptag">Seq2Seq LSTM</span><span class="ptag">Attention</span><span class="ptag">NLTK</span><span class="ptag">Keras</span></div>
       </div>
 
+      <div class="project-card">
+        <div class="project-top">
+          <div class="project-meta"><span class="project-badge">Hackathon &middot; 2025</span><span class="badge-hack">Amazon Nova Winner</span></div>
+          <a href="https://github.com/saisrikardevasani/sai-amd" target="_blank" rel="noopener" class="link-btn">GitHub &#8599;</a>
+        </div>
+        <div class="project-name">Sai &mdash; Agentic Desktop Copilot</div>
+        <div class="project-desc">V1 won the <strong>Amazon Nova AI Hackathon</strong>. V2 rebuilt for AMD MI300X. Give it a command in plain text &mdash; it routes autonomously to one of three execution tracks: <span class="p-accent">SIMPLE</span> (OS actions via PyAutoGUI, ~400 ms), <span class="p-accent">BROWSER</span> (Playwright accessibility tree, 1&ndash;3 s/step), or <span class="p-accent">DESKTOP</span> (Qwen-VL Plan&rarr;Act&rarr;Verify vision loop). 10&times; faster than V1&rsquo;s vision-only path for browser tasks.</div>
+        <div class="project-tags"><span class="ptag">Qwen-VL</span><span class="ptag">vLLM / ROCm</span><span class="ptag">AMD MI300X</span><span class="ptag">Playwright</span><span class="ptag">FastAPI</span><span class="ptag">PyAutoGUI</span><span class="ptag">WebSocket</span></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <div class="project-meta"><span class="project-badge">AI Agents &middot; 2026</span></div>
+          <a href="https://github.com/saisrikardevasani/hiring-signal-agent" target="_blank" rel="noopener" class="link-btn">GitHub &#8599;</a>
+        </div>
+        <div class="project-name">Hiring Signal Agent</div>
+        <div class="project-desc">Multi-step agentic pipeline: paste a job URL &rarr; scrape the JD &rarr; Claude extracts structured signals (skills, seniority, stack, confidence score) &rarr; <span class="p-accent">LLM-as-judge quality gate</span> (confidence &ge; 0.70 or retry) &rarr; Weaviate similarity search against your GitHub &rarr; personalised application brief. DeepEval + MLflow on every output.</div>
+        <div class="project-tags"><span class="ptag">LangGraph</span><span class="ptag">Claude API</span><span class="ptag">Weaviate</span><span class="ptag">DeepEval</span><span class="ptag">MLflow</span><span class="ptag">FastAPI</span><span class="ptag">Next.js</span><span class="ptag">Prometheus</span></div>
+      </div>
+
+      <div class="project-card card-wip">
+        <div class="project-top">
+          <div class="project-meta"><span class="project-badge">Audio DSP &middot; Active</span><span class="badge-wip">In Development</span></div>
+          <a href="https://github.com/saisrikardevasani/Roomsync" target="_blank" rel="noopener" class="link-btn">GitHub &#8599;</a>
+        </div>
+        <div class="project-name">Roomsync</div>
+        <div class="project-desc">Real-time multi-laptop call system with full audio processing and E2E encryption. C++ pipeline: <span class="p-accent">512-tap NLMS AEC</span> (10+ dB ERLE), spectral subtraction noise suppressor, LPC/LPCNet packet-loss concealment, Conv-TasNet source separation hooks. Encrypted per-frame with Signal Protocol <strong>Double Ratchet</strong> + MLS group keys (RFC 9420). Tauri desktop app with React/TypeScript UI and Rust bridge. NVIDIA Maxine GPU path with CPU fallback.</div>
+        <div class="project-tags"><span class="ptag">C++</span><span class="ptag">Rust</span><span class="ptag">Tauri</span><span class="ptag">NLMS AEC</span><span class="ptag">Double Ratchet</span><span class="ptag">ONNX</span><span class="ptag">Opus</span><span class="ptag">mDNS</span></div>
+      </div>
+
     </div>
   </div>
 </section>
